@@ -9,7 +9,7 @@ CREATE TABLE users (
   name VARCHAR(225) NOT NULL,
   email VARCHAR(225) NOT NULL,
   password INTEGER NOT NULL
-)
+);
 
 
 CREATE TABLE properties (
@@ -29,16 +29,16 @@ CREATE TABLE properties (
   province VARCHAR(225) NOT NULL,
   post_code VARCHAR(225) NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE
-)
+);
 
 
 CREATE TABLE reservations (
   id SERIAL PRIMARY KEY NOT NULL,
   start_date DATE NOT NULL,
   end_date DATE NOT NULL,
-  property_id INTEGER REFERENCES properties(id) ON DELETE CASCADE
+  property_id INTEGER REFERENCES properties(id) ON DELETE CASCADE,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
-)
+);
 
 CREATE TABLE property_reviews (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -47,4 +47,4 @@ CREATE TABLE property_reviews (
   reservation_id INTEGER REFERENCES reservations(id) ON DELETE CASCADE,
   rating SMALLINT NOT NULL DEFAULT 0,
   message TEXT
-)
+);
