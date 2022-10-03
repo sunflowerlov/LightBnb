@@ -4,7 +4,7 @@ VALUES ('Eva Stanley', 'sebastianguerra@ymail.com', '$2a$10$FB/BOAVhpuLvpOREQVmv
 ('Dominic Parks', 'victoriablackwell@outlook.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.')
 
 INSERT INTO properties (
-  user_id,
+  owner_id,
   title,
   description,
   thumbnail_photo_url,
@@ -73,12 +73,12 @@ VALUES (
 );
 
 
-INSERT INTO reservations (start_date, end_date, property_id, user_id)
+INSERT INTO reservations (start_date, end_date, property_id, guest_id)
 VALUES ('2018-09-11', '2018-09-26', 2, 3),
 ('2019-01-04', '2019-02-01', 2, 2),
 ('2021-10-01', '2021-10-14', 1, 3);
 
-INSERT INTO property_reviews (user_id, property_id, reservation_id, rating, message)
+INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message)
 VALUES (3, 2, 1, 3, 'message'),
 (2, 2, 2, 4, 'message'),
 (3, 1, 3, 4, 'message');
