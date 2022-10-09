@@ -26,7 +26,7 @@ VALUES (
   'description',
   'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350',
   'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg',
-  930.61,
+  93061,
   6,
   4,
   8,
